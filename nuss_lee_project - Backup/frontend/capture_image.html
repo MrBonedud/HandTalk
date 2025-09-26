@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handtalk-التقاط صور للتحليل</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="capture-body">
+    <div class="capture-container">
+        <h1 class="capture-title">التقاط صورة للتحليل</h1>
+        <p class="capture-subtitle">
+            التقط صورة مباشرة من الكاميرا لتحليل إشارات الأيدي أو المواقف.
+        </p>
+
+        <!-- Camera Feed and Capture Section -->
+        <div class="mb-8 camera-section">
+            <video id="cameraFeed" class="camera-stream hidden" autoplay playsinline></video>
+            <img id="capturedImagePreview" src="#" alt="الصورة الملتقطة" class="image-preview" />
+            <canvas id="canvas" class="hidden"></canvas>
+
+            <!-- Permission Guide / Placeholder -->
+            <div id="cameraPermissionGuide" class="permission-guide-box">
+                <p id="cameraPermissionMessage" class="text-xl font-semibold mb-4 text-gray-700">
+                    للبدء، الرجاء النقر على "تفعيل الكاميرا" ومنح الإذن عند المطالبة.
+                </p>
+                <p id="permissionDeniedMessage" class="text-red-600 mt-4 text-md hidden">
+                    تم رفض إذن الكاميرا. يرجى تفعيله يدوياً من إعدادات المتصفح ثم إعادة تحميل الصفحة.
+                </p>
+            </div>
+
+            <div class="mt-4 flex gap-4">
+                <button id="initiateCameraButton" class="capture-action-button hidden">تفعيل الكاميرا</button>
+                <button id="captureButton" class="capture-action-button hidden" disabled>التقاط الصورة</button>
+                <button id="retakeButton" class="retake-button hidden">إعادة الالتقاط</button>
+            </div>
+        </div>
+
+        <!-- Hidden Prompt Input Section -->
+        <div class="mb-6 text-right" style="display: none;">
+            <textarea id="promptInput" rows="5" class="prompt-textarea"></textarea>
+        </div>
+
+        <!-- Analyze Button -->
+        <button id="analyzeButton" class="analyze-button" disabled>
+            تحليل الصورة
+        </button>
+
+        <!-- Loading & Results -->
+        <div id="loadingIndicator" class="loading-indicator hidden">جاري التحليل...</div>
+        <div id="results" class="analysis-results hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">نتائج التحليل:</h2>
+            <p id="analysisOutput" class="text-gray-800 whitespace-pre-wrap text-lg leading-relaxed"></p>
+        </div>
+        <div id="error" class="error-message-box hidden">
+            <h2 class="text-2xl font-bold mb-4">حدث خطأ!</h2>
+            <p id="errorMessage" class="text-lg leading-relaxed"></p>
+        </div>
+
+        <div class="mt-10">
+            <a href="main_dashboard.html" class="back-button"> العودة للوحة التحكم </a>
+        </div>
+    </div>
+    <script src="js/capture_script.js"></script>
+</body>
+
+</html>

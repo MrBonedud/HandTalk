@@ -1,0 +1,22 @@
+[
+  { "word_ar": "مرحبا",       "word_en": "hello",         "image_url": "https://www.signasl.org/sign/hello" },
+  { "word_ar": "شكرا",        "word_en": "thank you",     "image_url": "https://www.signasl.org/sign/thank-you" },
+  { "word_ar": "من فضلك",     "word_en": "please",        "image_url": "https://www.signasl.org/sign/please" },
+  { "word_ar": "نعم",         "word_en": "yes",           "image_url": "https://www.signasl.org/sign/yes" },
+  { "word_ar": "لا",          "word_en": "no",            "image_url": "https://www.signasl.org/sign/no" },
+  { "word_ar": "مساعدة",      "word_en": "help",          "image_url": "https://www.signasl.org/sign/help" },
+  { "word_ar": "أكثر",        "word_en": "more",          "image_url": "https://www.signasl.org/sign/more" },
+  { "word_ar": "أنا أحبك",    "word_en": "i love you",    "image_url": "https://www.signasl.org/sign/i-love-you" },
+  { "word_ar": "صديق",        "word_en": "friend",        "image_url": "https://www.signasl.org/sign/friend" },
+  { "word_ar": "أب",          "word_en": "father",        "image_url": "https://www.signasl.org/sign/father" },
+  { "word_ar": "أم",          "word_en": "mother",        "image_url": "https://www.signasl.org/sign/mother" },
+  { "word_ar": "أخ",          "word_en": "brother",       "image_url": "https://www.signasl.org/sign/brother" },
+  { "word_ar": "أخت",         "word_en": "sister",        "image_url": "https://www.signasl.org/sign/sister" },
+  { "word_ar": "يأكل",        "word_en": "eat",           "image_url": "https://www.signasl.org/sign/eat" },
+  { "word_ar": "يشرب",       "word_en": "drink",         "image_url": "https://www.signasl.org/sign/drink" },
+  { "word_ar": "ينام",        "word_en": "sleep",         "image_url": "https://www.signasl.org/sign/sleep" },
+  { "word_ar": "ماذا",        "word_en": "what",          "image_url": "https://www.signasl.org/sign/what" },
+  { "word_ar": "أين",         "word_en": "where",         "image_url": "https://www.signasl.org/sign/where" },
+  { "word_ar": "لماذا",       "word_en": "why",           "image_url": "https://www.signasl.org/sign/why" },
+  { "word_ar": "مع السلامة",  "word_en": "goodbye",       "image_url": "https://www.signasl.org/sign/goodbye" }
+]

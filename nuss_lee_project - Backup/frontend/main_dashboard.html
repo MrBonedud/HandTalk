@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handtalk - لوحة التحكم الرئيسية</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Handtalk أهلاً بك في </h1>
+        <p class="dashboard-subtitle">اختر طريقة التحليل أو البحث:</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- الخيار 1: تحليل صورة (Upload) -->
+            <a href="analyze_image.html" class="dashboard-card blue-card">
+                <div class="dashboard-icon text-blue-600">
+                    <i class="fas fa-upload"></i>
+                </div>
+                <h2 class="dashboard-card-title">تحليل صورة مرفوعة</h2>
+                <p class="dashboard-card-description">ارفع صورة لتحليل إشارات الأيدي أو المواقف.</p>
+            </a>
+
+            <!-- الخيار 2: بحث عن حركة (Dictionary Search) -->
+            <a href="dictionary_search.html" class="dashboard-card purple-card">
+                <div class="dashboard-icon text-purple-600">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h2 class="dashboard-card-title">قاموس لغة الإشارة</h2>
+                <p class="dashboard-card-description">ابحث عن صور لحركات إشارة محددة.</p>
+            </a>
+
+            <!-- الخيار 3: التقاط صورة (Capture Image) -->
+            <a href="capture_image.html" class="dashboard-card green-card">
+                <div class="dashboard-icon text-green-600">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <h2 class="dashboard-card-title">التقاط صورة للتحليل</h2>
+                <p class="dashboard-card-description">التقط صورة مباشرة من الكاميرا لتحليلها.</p>
+            </a>
+
+            <!-- الخيار 4: إدخال صوتي لاسم الحركة (Voice Input) -->
+            <a href="voice_input.html" class="dashboard-card yellow-card">
+                <div class="dashboard-icon text-yellow-600">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h2 class="dashboard-card-title">البحث بالصوت</h2>
+                <p class="dashboard-card-description">انطق اسم الحركة للبحث عنها في القاموس.</p>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

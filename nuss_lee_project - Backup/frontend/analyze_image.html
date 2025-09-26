@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Handtalk-تحليل صورة</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="main-body">
+    <div class="main-container">
+        <h1 class="main-title">تحليل صورة مرفوعة</h1>
+        <p class="main-subtitle">
+            ارفع صورة لتحليل إشارات الأيدي أو المواقف الخاصة بالصم وضعاف السمع.
+        </p>
+
+        <!-- Image Upload Section -->
+        <div class="mb-6">
+            <label for="imageUpload" class="upload-button-label">
+                <input type="file" id="imageUpload" accept="image/*" class="hidden" />
+                <span id="uploadButtonText">اختر صورة لتحليلها</span>
+            </label>
+            <p id="fileName" class="text-gray-500 mt-2 text-sm"></p>
+            <p class="text-gray-500 text-sm mt-1">
+                أو الصق صورة مباشرة من الحافظة (Ctrl+V)
+            </p>
+            <img id="imagePreview" src="#" alt="معاينة الصورة" class="image-preview" />
+        </div>
+
+        <!-- Hidden Prompt Input Section -->
+        <div class="mb-6 text-right" style="display: none">
+            <textarea id="promptInput" rows="5" class="prompt-textarea"></textarea>
+        </div>
+
+        <!-- Analyze Button -->
+        <button id="analyzeButton" class="analyze-button" disabled>
+            تحليل الصورة
+        </button>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            جاري تحليل الصورة...
+        </div>
+
+        <!-- Results Display -->
+        <div id="results" class="analysis-results hidden">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">نتائج التحليل:</h2>
+            <p id="analysisOutput" class="text-gray-800 whitespace-pre-wrap text-lg leading-relaxed"></p>
+        </div>
+
+        <!-- Error Message Display -->
+        <div id="error" class="error-message-box hidden">
+            <h2 class="text-2xl font-bold mb-4">حدث خطأ!</h2>
+            <p id="errorMessage" class="text-lg leading-relaxed"></p>
+        </div>
+
+        <!-- Back to Dashboard Link -->
+        <div class="mt-10">
+            <a href="main_dashboard.html" class="back-button">
+                العودة للوحة التحكم
+            </a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

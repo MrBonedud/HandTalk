@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handtalk - البحث بالصوت</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="voice-body">
+    <div class="voice-container">
+        <h1 class="voice-title">البحث بالصوت</h1>
+        <p class="voice-subtitle">
+            تحدث باسم الحركة التي تريد البحث عنها في قاموس لغة الإشارة.
+        </p>
+
+        <!-- Voice Input Section -->
+        <div class="voice-input-section mb-6">
+            <div id="micPermissionGuide" class="permission-guide-box mic-guide">
+                <p id="micPermissionMessage" class="text-xl font-semibold mb-4 text-gray-700">
+                    للبحث بالصوت، الرجاء النقر على "ابدأ التسجيل" ومنح إذن الميكروفون.
+                </p>
+                <p id="micDeniedMessage" class="text-red-600 mt-4 text-md hidden">
+                    تم رفض إذن الميكروفون. يرجى تفعيله يدوياً من إعدادات المتصفح.
+                </p>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="startButton" class="voice-action-button start-button hidden">
+                    <i class="fas fa-microphone"></i> ابدأ التسجيل
+                </button>
+                <button id="stopButton" class="voice-action-button stop-button hidden" disabled>
+                    <i class="fas fa-stop"></i> إيقاف التسجيل
+                </button>
+            </div>
+
+            <p id="recordingStatus" class="text-yellow-600 mt-2 text-md hidden">
+                جاري التسجيل...
+            </p>
+            <p id="transcribedText"
+                class="text-gray-800 font-semibold mt-4 text-xl min-h-[2rem] border-b border-gray-300 pb-2">
+            </p>
+
+            <div class="mt-6 w-full">
+                <label for="languageSelect" class="block text-gray-700 text-lg font-semibold mb-2">لغة الإشارة
+                    للبحث:</label>
+                <select id="languageSelect" class="dictionary-lang-select w-full md:w-1/2 mx-auto">
+                    <option value="ASL">ASL (لغة الإشارة الأمريكية)</option>
+                    <option value="BSL">BSL (لغة الإشارة البريطانية)</option>
+                    <option value="JSL">JSL (لغة الإشارة الأردنية)</option>
+                    <option value="generic">عامة</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading & Results -->
+        <div id="loadingVoiceSearch" class="loading-indicator dictionary-loading-indicator hidden">
+            جاري البحث عن صور الإشارة...
+        </div>
+        <div id="voiceSearchResults" class="dictionary-results-grid"></div>
+        <div id="noVoiceResults" class="no-results-message hidden">
+            <p class="text-lg leading-relaxed">لم يتم العثور على أي صور مطابقة.</p>
+        </div>
+        <div id="voiceError" class="error-message-box dictionary-error-message hidden">
+            <h2 class="text-xl font-bold mb-2">حدث خطأ!</h2>
+            <p id="voiceErrorMessage" class="text-lg leading-relaxed"></p>
+        </div>
+
+        <div class="mt-10">
+            <a href="main_dashboard.html" class="back-button">
+                العودة للوحة التحكم
+            </a>
+        </div>
+    </div>
+    <script src="js/voice_script.js"></script>
+</body>
+
+</html>
